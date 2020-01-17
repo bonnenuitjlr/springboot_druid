@@ -17,9 +17,13 @@ spring:
     maxWait: 60000
     # 配置多久进行一次检测，检测需要关闭的空闲连接 单位毫秒
     timeBetweenEvictionRunsMillis: 60000
+    # 配置一个连接在池中最小生存的时间，单位是毫秒
+    min-evictable-idle-time-millis: 30000
+    # 校验SQL，Oracle配置
     validationQuery: SELECT 1 FROM dual
     # 配置监控统计拦截的filters,去掉后，监控界面的sql无法统计
     filters: stat,wall,log4j
+
 
   jpa:
     show-sql: true
